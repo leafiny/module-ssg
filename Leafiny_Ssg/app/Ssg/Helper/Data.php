@@ -26,6 +26,7 @@ class Ssg_Helper_Data extends Core_Helper
             return;
         }
 
+        $this->flushCache();
         $this->generatePages();
         $this->generateEntities();
         $this->flushCache();
