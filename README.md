@@ -97,14 +97,14 @@ php deploy.php symlink static/en-us
 php deploy.php symlink static/fr-fr
 ```
 
-The symlink deployment script will run only once, or when a new module is added.
+The **symlink** deployment will run only once, or when a new module is added.
 
 ```
 php deploy.php copy static/en-us
 php deploy.php copy static/fr-fr
 ```
 
-The copy deployment script will run each time you want to deploy the site.
+The **copy** deployment will run each time you want to deploy the site.
 
 **Note:** for security reasons, resources will never be programmatically removed. Feel free to remove the static site directory and start a new deployment.
 
