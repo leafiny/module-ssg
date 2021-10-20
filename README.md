@@ -59,7 +59,7 @@ $config = [
                 'identifiers' => [
                     '/',
                     '/notfound.html',
-                    'custom-page.html',
+                    '/custom-page.html',
                 ],
             ]
         ],
