@@ -29,6 +29,7 @@ $config = [
             'generator' => [
                 'identifiers' => [
                     '/',
+                    '/notfound.html',
                 ],
             ]
         ],
@@ -53,6 +54,7 @@ $config = [
             'generator' => [
                 'identifiers' => [
                     '/',
+                    '/notfound.html',
                     'custom-page.html',
                 ],
             ]
@@ -114,34 +116,3 @@ All the pages will be created in the **static** directory, for each language:
 
 * /static/en-us
 * /static/fr-fr
-
-## Extend
-
-Add a new entity to deploy:
-
-```php
-$config = [
-    /* ... */
-    'helper' => [
-        'ssg' => [
-            /* ... */
-            'generator' => [
-                'entities'  => [
-                    'custom_entity' => [ // The entity model identifier
-                        'identifier' => 'path_key', // The url key column in the entity table
-                        'language'   => 'language', // The language column in the entity table
-                        'filters' => [ // The list filters
-                            [
-                                'column' => 'status',
-                                'value'  => 1,
-                            ],
-                        ],
-                    ],
-                ],
-            ]
-        ],
-        /* ... */
-    ],
-    /* ... */
-];
-```

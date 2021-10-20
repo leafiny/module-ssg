@@ -41,6 +41,12 @@ class Ssg_Observer_Generate extends Core_Observer implements Core_Interface_Obse
         $language = $this->getLanguageField() ? $entity->getData($this->getLanguageField()) : null;
 
         $this->getHelper()->generatePage($url, $url, $language);
+
+        if (class_exists('Fpc_Helper_Cache')) {
+            /** @var Fpc_Helper_Cache $cache */
+            $cache = App::getSingleton('helper', 'fpc_cache');
+            $cache->flushCache($identifier);
+        }
     }
 
     /**

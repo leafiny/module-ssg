@@ -28,6 +28,7 @@ class Ssg_Helper_Data extends Core_Helper
 
         $this->generatePages();
         $this->generateEntities();
+        $this->flushCache();
     }
 
     /**
@@ -129,6 +130,21 @@ class Ssg_Helper_Data extends Core_Helper
         App::setLanguage($currentLanguage);
 
         return $page;
+    }
+
+    /**
+     * Flush all the cache
+     *
+     * @throws Exception
+     */
+    protected function flushCache(): void
+    {
+        /** @var Core_Helper_File $file */
+        $file = App::getObject('helper_file');
+        /** @var Core_Helper $helper */
+        $helper = App::getObject('helper');
+
+        $file->rmdir($helper->getCacheDir());
     }
 
     /**
