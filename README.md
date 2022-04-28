@@ -12,10 +12,6 @@ Leafiny >= 1.9.1
 
 Copy `Leafiny_Ssg` into your Leafiny `modules` directory.
 
-# Example
-
-Go to the [Demo Leafiny Static Website](https://demo.en.static.leafiny.com/). This is a static website built from the official Leafiny demo website.
-
 # Configuration
 
 In the global config file (ex: `etc/config.dev.php`), enable SSG and add the static site host for all languages:
